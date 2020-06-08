@@ -1,0 +1,194 @@
+<html>
+  <style type="text/css">
+    #calc * {
+      font-size: 16px;
+    }
+    #calc table {
+      border: solid 3px silver;
+      border-spacing: 3px;
+      background-color: #eee;
+    }
+    #calc table td {
+      border-spacing: 3px;
+    }
+    input.display {
+      width: 172px;
+      text-align: center;
+    }
+    td.buttons {
+      border-top: solid 6px silver;
+    }
+    .number {
+      width: 40px;
+      height: 40px;
+      background-color: greenyellow;
+    }
+    td.buttonC {
+      border: solid 1px gold;
+    }
+    .C {
+      width: 170px;
+      height: 40px;
+      background-color: red;
+    }
+    .eva {
+      width: 40px;
+      height: 40px;
+      background-color: green;
+    }
+  </style>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <form name="calc" id="calc">
+      <table>
+        <tr>
+          <td>
+            <input
+              type=" text"
+              readonly
+              name="input"
+              size="20"
+              class="display"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="buttons">
+            <div>
+              <input
+                type="button"
+                class="number"
+                name="one"
+                value="1"
+                OnClick="calc.input.value += '1'"
+              />
+              <input
+                type="button"
+                class="number"
+                name="two"
+                value="2"
+                OnClick="calc.input.value += '2'"
+              />
+              <input
+                type="button"
+                class="number"
+                name="three"
+                value="3"
+                OnClick="calc.input.value += '3'"
+              />
+              <input
+                type="button"
+                class="number"
+                name="mult"
+                value="/"
+                OnClick="calc.input.value += '/'"
+              />
+              <br />
+              <input
+                type="button"
+                class="number"
+                name="four"
+                value="4"
+                OnClick="calc.input.value += '4'"
+              />
+              <input
+                type="button"
+                class="number"
+                name="five"
+                value="5"
+                OnClick="calc.input.value += '5'"
+              />
+              <input
+                type="button"
+                class="number"
+                name="six"
+                value="6"
+                OnClick="calc.input.value += '6'"
+              />
+              <input
+                type="button"
+                class="number"
+                name="dev"
+                value="*"
+                OnClick="calc.input.value += '*'"
+              />
+              <br />
+              <input
+                type="button"
+                class="number"
+                name="seven"
+                value="7"
+                OnClick="calc.input.value += '7'"
+              />
+              <input
+                type="button"
+                class="number"
+                name="eight"
+                value="8"
+                OnClick="calc.input.value += '8'"
+              />
+              <input
+                type="button"
+                class="number"
+                name="nine"
+                value="9"
+                OnClick="calc.input.value += '9'"
+              />
+              <input
+                type="button"
+                class="number"
+                name="sub"
+                value="-"
+                OnClick="calc.input.value += '-'"
+              />
+              <br />
+              <input
+                type="button"
+                class="number"
+                name="zero"
+                value="0"
+                OnClick="calc.input.value += '0'"
+              />
+              <input
+                type="button"
+                class="number"
+                name="dot"
+                value="."
+                OnClick="calc.input.value += '.'"
+              />
+              <input
+                type="button"
+                class="number"
+                name="add"
+                value="+"
+                OnClick="calc.input.value += '+'"
+              />
+              <input
+                type="button"
+                class="eva"
+                name="doit"
+                value="="
+                OnClick="calc.input.value = eval(calc.input.value)"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="buttonC">
+            <input
+              type="button"
+              class="C"
+              id="1"
+              name="clear"
+              value="C"
+              OnClick="calc.input.value += ''"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
